@@ -51,6 +51,7 @@
 {
     NSMutableArray *json;
     NSString *getAllEventsURL = @"http://starscomputingcorps.org/celebrationApp/getAllEvents.php";
+                                                                              //getAllSessions and getConference.php
     NSURL * url = [NSURL URLWithString:getAllEventsURL];
     NSData * data = [NSData dataWithContentsOfURL:url];
     NSDictionary *temp = [[NSDictionary alloc] init];
