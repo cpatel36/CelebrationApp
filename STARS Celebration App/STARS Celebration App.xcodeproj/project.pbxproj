@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		463F185D18B2B1EC00B77C12 /* FavoriteEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 463F185C18B2B1EC00B77C12 /* FavoriteEventsViewController.m */; };
 		4692678918BBE6C600C2025F /* FavoritesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4692678818BBE6C600C2025F /* FavoritesCell.m */; };
+		46BC5E6D18C0D76D00684690 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 46BC5E6B18C0D76D00684690 /* DataModel.xcdatamodeld */; };
 		46E9000018A033DA00E01CF2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46E9FFFF18A033DA00E01CF2 /* UIKit.framework */; };
 		46E9000618A033DA00E01CF2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46E9000418A033DA00E01CF2 /* InfoPlist.strings */; };
 		46E9000818A033DA00E01CF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E9000718A033DA00E01CF2 /* main.m */; };
@@ -43,6 +44,7 @@
 		463F185C18B2B1EC00B77C12 /* FavoriteEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteEventsViewController.m; sourceTree = "<group>"; };
 		4692678718BBE6C600C2025F /* FavoritesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesCell.h; sourceTree = "<group>"; };
 		4692678818BBE6C600C2025F /* FavoritesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesCell.m; sourceTree = "<group>"; };
+		46BC5E6C18C0D76D00684690 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		46E9000318A033DA00E01CF2 /* STARS Celebration App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "STARS Celebration App-Info.plist"; sourceTree = "<group>"; };
 		46E9000518A033DA00E01CF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		46E9000718A033DA00E01CF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -94,9 +96,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		46BC5E6718C0D65D00684690 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				46BC5E6B18C0D76D00684690 /* DataModel.xcdatamodeld */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
 		46E9000118A033DA00E01CF2 /* STARS Celebration App */ = {
 			isa = PBXGroup;
 			children = (
+				46BC5E6718C0D65D00684690 /* Database */,
 				46E9003418A0357E00E01CF2 /* DataStructures */,
 				46E9003018A0355F00E01CF2 /* ViewControllers */,
 				46E9000A18A033DA00E01CF2 /* AppDelegate.h */,
@@ -301,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46BC5E6D18C0D76D00684690 /* DataModel.xcdatamodeld in Sources */,
 				46E9000C18A033DA00E01CF2 /* AppDelegate.m in Sources */,
 				463F185D18B2B1EC00B77C12 /* FavoriteEventsViewController.m in Sources */,
 				46E9003A18A03A6000E01CF2 /* EventDetailsViewController.m in Sources */,
@@ -527,6 +539,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		46BC5E6B18C0D76D00684690 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				46BC5E6C18C0D76D00684690 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 46BC5E6C18C0D76D00684690 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 46E9FFF018A033DA00E01CF2 /* Project object */;
 }
