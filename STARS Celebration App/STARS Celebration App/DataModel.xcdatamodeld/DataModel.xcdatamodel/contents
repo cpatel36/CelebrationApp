@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Conference" syncable="YES">
+    <entity name="Conference" representedClassName="Conference" syncable="YES">
         <attribute name="confID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="confLoc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="confMap" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="confName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="confYear" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Event" syncable="YES">
+    <entity name="Event" representedClassName="Event" syncable="YES">
         <attribute name="eventAuthor" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="eventCategory" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="eventDesc" optional="YES" attributeType="String" syncable="YES"/>
@@ -15,9 +15,19 @@
         <attribute name="eventName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="eventSurvey" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="eventTrack" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="eid" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Session" inverseName="eid" inverseEntity="Session" syncable="YES"/>
+    </entity>
+    <entity name="Session" representedClassName="Session" syncable="YES">
+        <attribute name="eventID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="sessionDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="sessionID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="sessionLocation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sessionTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="eid" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Event" inverseName="eid" inverseEntity="Event" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Event" positionX="-5994" positionY="-2502" width="128" height="148"/>
-        <element name="Conference" positionX="-5850" positionY="-2502" width="128" height="118"/>
+        <element name="Conference" positionX="-5850" positionY="-2538" width="128" height="118"/>
+        <element name="Event" positionX="-6030" positionY="-2494" width="128" height="163"/>
+        <element name="Session" positionX="-5841" positionY="-2392" width="126" height="133"/>
     </elements>
 </model>
