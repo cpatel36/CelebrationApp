@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C64" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Conference" representedClassName="Conference" syncable="YES">
         <attribute name="confID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="confLoc" optional="YES" attributeType="String" syncable="YES"/>
@@ -11,7 +11,7 @@
         <attribute name="eventAuthor" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="eventCategory" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="eventDesc" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="eventID" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="eventID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="eventName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="eventSurvey" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="eventTrack" optional="YES" attributeType="String" syncable="YES"/>

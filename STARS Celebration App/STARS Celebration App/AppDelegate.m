@@ -19,7 +19,7 @@
     [self retrieveData];
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -70,7 +70,17 @@
         NSString * eSurvey = [[json objectAtIndex:i] objectForKey:@"survey"];
         NSString * eTrack = [[json objectAtIndex:i] objectForKey:@"track"];
         
-        Event * myEvent = [[Event alloc] initWithEventID:eID andEventName:eName andEventAuthor:eAuthor andEventCategory:eCat andEventTrack:eTrack andEventSurvey:eSurvey andEventDesc:eDesc];
+        Event * myEvent = [Event alloc];
+        myEvent.eventID = eID;
+        myEvent.eventName = eName;
+        myEvent.eventAuthor = eAuthor;
+        myEvent.eventDesc = eDesc;
+        myEvent.eventCategory = eCat;
+        myEvent.eventSurvey= eSurvey;
+        myEvent.eventTrack = eTrack;
+        
+        
+        //Event * myEvent = [[Event alloc] initWithEventID:eID andEventName:eName andEventAuthor:eAuthor andEventCategory:eCat andEventTrack:eTrack andEventSurvey:eSurvey andEventDesc:eDesc];
         
         //Adds event to events array
         [eventsArrayAD addObject:myEvent];

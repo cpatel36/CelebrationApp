@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="cA4-AH-nXb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ZfY-if-uPD">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Event By Name View Controller - Events By Name-->
@@ -30,7 +30,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="TitleLabel" destination="YxZ-ln-KRO" id="gFU-oM-8nv"/>
-                                    <segue destination="tZ2-TQ-hBZ" kind="push" identifier="eventselected" id="4AQ-Gd-Rgt"/>
+                                    <segue destination="TOT-KX-u2j" kind="push" id="9Hs-19-iex"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -42,7 +42,39 @@
             </objects>
             <point key="canvasLocation" x="1083" y="186"/>
         </scene>
-        <!--Favorite Events View Controller - Root View Controller-->
+        <!--Table View Controller - Sessions-->
+        <scene sceneID="GwO-RA-eCA">
+            <objects>
+                <tableViewController storyboardIdentifier="Sessions View Controller" id="TOT-KX-u2j" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="mhk-dY-OPZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="w6L-xW-oke">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="w6L-xW-oke" id="2tC-Fd-gdf">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="tZ2-TQ-hBZ" kind="push" id="hzb-wH-lQ8"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="TOT-KX-u2j" id="ZqS-zb-a6j"/>
+                            <outlet property="delegate" destination="TOT-KX-u2j" id="iIv-wG-cqz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Sessions" id="dbk-gR-wZD"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kI0-vQ-TpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1613" y="186"/>
+        </scene>
+        <!--Favorite Events View Controller - Favorited Events-->
         <scene sceneID="E2g-ZQ-gGL">
             <objects>
                 <tableViewController id="Tlf-Eh-Smy" customClass="FavoriteEventsViewController" sceneMemberID="viewController">
@@ -74,7 +106,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="7Gp-Fm-q9B">
+                    <navigationItem key="navigationItem" title="Favorited Events" id="7Gp-Fm-q9B">
                         <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="S94-U3-aia">
                             <connections>
                                 <action selector="reload:" destination="Tlf-Eh-Smy" id="21s-IO-aEp"/>
@@ -171,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cfK-WR-BLa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2143" y="186"/>
+            <point key="canvasLocation" x="2157" y="887"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cdK-7f-Su3">
@@ -191,6 +223,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V53-Q1-6ul" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="557" y="186"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="b7a-8H-4VP">
+            <objects>
+                <viewController id="ZfY-if-uPD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hK1-3P-ZLv"/>
+                        <viewControllerLayoutGuide type="bottom" id="D6h-DW-aDD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gsj-Aw-xDg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xTg-k6-yW9">
+                                <rect key="frame" x="0.0" y="401" width="320" height="167"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et ma
+
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NgH-sF-oLq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-490" y="548"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Usu-7E-Dcb">
@@ -218,6 +280,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="4AQ-Gd-Rgt"/>
+        <segue reference="fBi-Y1-UDQ"/>
     </inferredMetricsTieBreakers>
 </document>
